@@ -1,0 +1,152 @@
+.container {
+  width: 98%;
+  background-color: white;
+  margin: 20px auto 0;
+  border-radius: 12px;
+}
+
+.hr {
+  width: 90%;
+  margin: 0 5%;
+  border: 1px solid @inactive-grey;
+}
+
+.callToAction {
+  position: relative;
+  
+  img {
+    border-radius: 12px;
+    width: 90%;
+    margin: 5%;
+    position: relative;  
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+  }
+
+  .topText {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .mobileTopText {
+    display: none;
+  }
+
+  .btn {
+    text-align: center;
+    color: white;
+    background-color: @action-green;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    padding: 5px 50px;
+    border: 1px solid @active-dark-blue;
+    border-radius: 12px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.about {
+  width: 90%;
+  margin: 0 5% 5% 5%;
+
+  h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    padding-top: 2%;
+  }
+
+  p {
+    color: @main-text-color;
+    font-size: 1.8rem;
+    line-height: 27px;
+    text-align: center;
+    padding: 2%;
+  }
+}
+
+h4 {
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  
+  .featureBox {
+    .borderTest;
+      width: 29%;
+      height: 34vh;
+      margin: 0 2% 2% 2%;
+      text-align: center;
+      font-size: 2.4rem;
+      border-radius: 17px;
+      border: 1px solid @inactive-grey;
+      img {
+        border-radius: 15px 15px 0 0;
+      }
+  }
+}
+
+
+// v----- Media Queries -----v
+@media @tablet {
+  .callToAction {
+    .btn {
+      transform: translate(-50%, -0%);
+    }
+  }
+  .features {
+    .featureBox {
+      width: 46%;
+      height: 36vh;
+      margin: 2% 0;
+    }
+  }
+}
+
+@media @phone {
+  .callToAction {
+    .topText {
+      display: none;
+    }
+    .mobileTopText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 22vh;
+      margin-bottom: 2%;
+    }
+    .btn {
+      transform: translate(-50%, 170%);
+    }
+  }
+  h4 {
+    padding-bottom: 0;
+  }
+  .features {
+    padding-bottom: 3%;
+    .featureBox {
+      width: 90%;
+      height: 43vh;
+      margin: 3% 0;
+    }
+  }
+}
