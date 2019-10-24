@@ -109,6 +109,9 @@ nav a {
   header {
     flex-direction: column;
   }
+  header .headCont img {
+    border-radius: 0 0 12px 12px;
+  }
 }
 .container {
   width: 98%;
@@ -139,6 +142,9 @@ nav a {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(37, 59, 86, 0.6);
+  padding: 2%;
+  border-radius: 20px;
 }
 .callToAction .topText h1 {
   font-size: 4rem;
@@ -205,7 +211,7 @@ h4 {
 }
 @media (max-width: 800px) {
   .callToAction .btn {
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, 20%);
   }
   .features .featureBox {
     width: 46%;
